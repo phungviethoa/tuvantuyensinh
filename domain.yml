@@ -1,0 +1,1704 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- xac_nhan
+- phu_nhan
+- chao_hoi
+- phone
+- dat_lich
+- name
+- email
+- khong_dat_lich
+- menu_chinh
+- tu_van_truc_tiep_02
+- tu_van_truc_tiep_01
+- tu_van_truc_tiep_cong_tac_hs_sv
+- tu_van_truc_tiep_dao_tao
+- tu_van_truc_tiep_doan_the
+- tu_van_truc_tiep_to_chuc
+- tu_van_truc_tiep_tuyen_sinh
+- tam_biet
+- robot
+- dang_ky
+- ban_ke_hoach
+- ban_tuyen_sinh
+- phong_CTHSSV
+- phong_to_chuc
+- phong_dao_tao
+- cac_phong_ban
+- cac_khoa_nghe
+- khoa_tin_hoc
+- giao_vien_khoa_tin
+- nhiem_vu_khoa_tin
+- lien_he_khoa_tin
+- hoat_dong_khoa_tin
+- hoc_tap_khoa_tin
+- khoa_co_khi
+- giao_vien_khoa_co_khi
+- nhiem_vu_khoa_co_khi
+- lien_he_khoa_co_khi
+- hoat_dong_khoa_co_khi
+- hoc_tap_khoa_co_khi
+- khoa_dien_dien_tu
+- giao_vien_khoa_dien_dien_tu
+- nhiem_vu_khoa_dien_dien_tu
+- lien_he_khoa_dien_dien_tu
+- hoat_dong_khoa_dien_dien_tu
+- hoc_tap_khoa_dien_dien_tu
+- khoa_kinh_te
+- giao_vien_khoa_kinh_te
+- nhiem_vu_khoa_kinh_te
+- lien_he_khoa_kinh_te
+- hoat_dong_khoa_kinh_te
+- hoc_tap_khoa_kinh_te
+- khoa_hoc_co_ban
+- giao_vien_khoa_hoc_co_ban
+- nhiem_vu_khoa_hoc_co_ban
+- lien_he_khoa_hoc_co_ban
+- hoat_dong_khoa_hoc_co_ban
+- hoc_tap_khoa_hoc_co_ban
+- doan_the
+- cong_tac_dang
+- cong_tac_cong_doan
+- cong_tac_cong_doan_01
+- cong_tac_cong_doan_02
+- doan_tn_hssv
+- ket_nap_doan_vien
+- cac_hoat_dong_doan
+- chuan_bi_ho_so_01
+- chuan_bi_ho_so_02
+- chuan_bi_ho_so_03
+- chuan_bi_ho_so_04
+- chuan_bi_ho_so_05
+- chuan_bi_ho_so_06
+- cac_nganh_nghe
+- khu_KTX
+- KTX
+- gioi_thieu_ktx
+- phi_ktx
+- an_ninh_ve_sinh
+- dang_ky_ktx
+- huong_dan_ktx
+- cang_tin
+- san_tap_the_thao
+- nha_khach
+- nha_hieu_bo
+- hieu_bo_ban_giam_hieu
+- hieu_bo_phong_ban
+- hieu_bo_cac_khoa
+- hieu_bo_hoi_truong
+- hieu_bo_truyen_thong
+- hoc_tap_giang_duong
+- phong_hoc_ly_thuyet
+- phong_hoc_thuc_hanh
+- giang_duong
+- hoc_phi
+- hp_cong_nghe_oto
+- hp_cong_nghe_oto_cd
+- hp_cong_nghe_oto_tc
+- hp_dien_cong_nghiep
+- hp_dien_cong_nghiep_cd
+- hp_dien_cong_nghiep_tc
+- hp_dien_tu_dan_dung
+- hp_dien_tu_dan_dung_cd
+- hp_dien_tu_dan_dung_tc
+- hp_dien_tu_dan_dung_sc
+- hp_han
+- hp_han_tc
+- hp_han_sc
+- hp_quan_tri_mang_mt
+- hp_quan_tri_mang_mt_cd
+- hp_quan_tri_mang_mt_tc
+- hp_tin_hoc_van_phong_sc
+- hp_huong_dan_du_lich
+- hp_huong_dan_du_lich_tc
+- hp_huong_dan_du_lich_sc
+- hp_ke_toan_doanh_nghiep
+- hp_ke_toan_doanh_nghiep_cd
+- hp_ke_toan_doanh_nghiep_tc
+- hp_ke_toan_doanh_nghiep_sc
+- hp_vhm_thi_cong_nen
+- tro_cap_xa_hoi
+- mien_giam_hoc_phi
+- xet_tuyen
+- xet_tuyen_01
+- xet_tuyen_02
+- doi_tuong_uu_tien
+- doi_tuong_uu_tien_02
+- doi_tuong_uu_tien_03
+- doi_tuong_uu_tien_04
+- khu_vuc
+- hinh_anh_nhap_hoc
+- ban_do_truong
+- huong_dan_su_dung
+entities:
+- email
+- phone
+- name
+responses:
+# Chào hỏi
+  utter_chao_hoi:
+  - image: https://i.imgur.com/ArqfVWW.jpg
+    text: Chào mừng em đến với trường Cao đẳng Kỹ thuật Công nghệ Hòa Bình.
+# Hướng dẫn sử dụng chatbot
+  utter_huong_dan_su_dung:
+  - text: Em có muốn xem Hướng dẫn sử dụng Chatbot Tư vấn tuyển sinh này không?
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_huong_dan_su_dung_01:
+  - text: Các em có thể sử dụng các nút bấm để tìm thông tin mình cần.
+    image: https://i.imgur.com/TXvozCb.png
+  utter_huong_dan_su_dung_02:
+  - text: Hoặc cũng có thể nói những điều mình còn thắc mắc.
+    image: https://i.imgur.com/YQzDG9Y.png
+  utter_huong_dan_su_dung_03:
+  - text: |
+          Có các nội dung chính sau:
+          - Nói [xin chào] bắt đầu.
+          - Nói [tạm biệt] kết thúc.
+          - Nói [menu chính] vào menu chính.
+          - Nói [các phòng ban của trường] các phòng ban.
+          - Nói [các khoa của trường] các Khoa.
+          - Nói [tổ chức đoàn thể] Đoàn thể
+          - Nói [hỗ trợ tư vấn trực tiếp] sđt hỗ trợ
+          - Nói [em muốn học tại trường] chuẩn bị hồ sơ
+          - Nói [các ngành nghề] các ngành nghề.
+          - Nói [ký túc xá] Khu Ký túc xá
+          - Nói [nhà hiệu bộ] Nhà hiệu bộ
+          - Nói [phòng học tập của trường] học tập & giảng đường
+          - Nói [Học phí] học phí
+          - Nói [Trợ cấp xã hội] trợ cấp xã hội
+          - Nói [Miễn giảm học phí] miễn giảm học phí
+          - Nói [Xét tuyển] xét tuyển hồ sơ
+          - Nói [Đối tượng ưu tiên] ưu tiên xét tuyển
+          - Nói [Khu vực] ưu tiên khu vực   
+    image: https://i.imgur.com/yhlqwXw.jpg    
+  utter_huong_dan_su_dung_04:
+  - text: Cảm ơn em! Mời em tiếp tục...
+    image: https://i.imgur.com/yhlqwXw.jpg 
+# Đặt lịch tư vấn trực tiếp
+  utter_dat_lich_tu_van_truc_tiep:
+  - text: Em có muốn đặt lịch để được Giáo viên tuyển sinh gọi điện tư vấn trực tiếp không?    
+    buttons:
+    - title: đặt lịch
+      payload: /dat_lich
+    - title: không
+      payload: /khong_dat_lich
+  utter_ask_name:
+  - text: 'Họ và tên:'
+  utter_ask_phone:
+  - text: 'Số điện thoại:'
+  utter_ask_email:
+  - text: 'Email:'
+  utter_dat_lich_thanh_cong:
+  - text: |
+           Cám ơn em. Thông tin của em đã được lưu thành công.
+           - Họ và tên: {name}
+           - Số điện thoại: {phone}
+           - Email: {email}
+           Các Thầy cô giáo tuyển sinh sẽ liên hệ tư vấn cho em sớm nhất. Mời em tiếp tục...
+  utter_khong_dat_lich:
+  - text: Cám ơn em! Mời em tiếp tục...
+# Tạm biệt khi người dùng nói tạm biệt
+  utter_tam_biet:
+  - text: Tạm biệt! Hẹn gặp lại em.
+  - text: Tạm biệt! Chúc em một ngày tốt lành.
+# Nói Thầy là robot tư vấn tuyển sinh khi người dùng hỏi ai đang nói chuyện
+  utter_robot:
+  - text: Thầy là robot tư vấn tuyển sinh của Trường Cao đẳng Kỹ thuật Công nghệ Hoà Bình  
+# Menu chính của chatbot
+  utter_menu_chinh:
+  - text: MENU CHÍNH
+    elements:
+    - title: "Thông tin về Trường"
+      subtitle: "Các thông tin chính về Trường Cao đẳng Kỹ thuật Công nghệ Hoà Bình"
+      image_url: "https://i.imgur.com/6QWrzO0.jpg"
+      buttons: 
+      - title: Các Phòng ban
+        payload: /cac_phong_ban
+      - title: Các Khoa
+        payload: /cac_khoa_nghe
+      - title: "Đoàn thể"
+        payload: /doan_the
+    - title: "Thông tin về tuyển sinh"
+      subtitle: "Các thông tin về tuyển sinh năm học 2021"
+      image_url: "https://i.imgur.com/ubzUN4Z.jpg"
+      buttons:
+      - title: Số điện thoại hỗ trợ
+        payload: /tu_van_truc_tiep_01
+      - title: Chuẩn bị hồ sơ
+        payload: /chuan_bi_ho_so_01
+      - title: "Các ngành nghề đào tạo"
+        payload: /cac_nganh_nghe
+    - title: "Cơ sở vật chất"
+      subtitle: Toà nhà hành chính, ký túc xá, căng tin, sân thể thao, phòng học,...
+      image_url: "https://i.imgur.com/RhZiUAP.jpg"
+      buttons:
+      - title: khu ký túc xá
+        payload: /khu_KTX
+      - title: toà nhà hiệu bộ
+        payload: /nha_hieu_bo
+      - title: học tập & giảng đường
+        payload: /hoc_tap_giang_duong
+    - title: "Học phí và trợ cấp"
+      subtitle: "Học phí các hệ đào tạo, các ngành nghề và trợ cấp xã hội"
+      image_url: "https://i.imgur.com/aliT3gE.jpg"
+      buttons:
+      - title: "Học phí"
+        payload: /hoc_phi
+      - title: "Trợ cấp xã hội"
+        payload: /tro_cap_xa_hoi
+      - title: "Miễn giảm học phí"
+        payload: /mien_giam_hoc_phi
+    - title: "Xét tuyển đầu vào"
+      subtitle: "Nội dung xét tuyển hồ sơ đầu vào và các ưu tiên xét tuyển"
+      image_url: "https://i.imgur.com/lbnLBs9.jpg"
+      buttons:
+      - title: "Xét tuyển hồ sơ"
+        payload: /xet_tuyen
+      - title: "Ưu tiên xét tuyển"
+        payload: /doi_tuong_uu_tien
+      - title: "Ưu tiên khu vực"
+        payload: /khu_vuc 
+# Các phòng ban hành chính của Trường
+  utter_cac_phong_ban:
+  - text: CÁC PHÒNG BAN HÀNH CHÍNH
+    elements:
+    - title: CÁC PHÒNG HÀNH CHÍNH
+      subtitle: Em muốn tìm hiển về phòng hành chính nào của trường?
+      image_url: https://i.imgur.com/cZT7uFh.jpg
+      buttons: 
+      - title: Phòng Đào tạo
+        payload: /phong_dao_tao
+      - title: Phòng CTHSSV
+        payload: /phong_CTHSSV
+      - title: Phòng Tổ chức
+        payload: /phong_to_chuc
+    - title: CÁC BAN HÀNH CHÍNH
+      subtitle: Em muốn tìm hiển về ban hành chính nào của trường?
+      image_url: https://i.imgur.com/Uu4xXHO.jpg
+      buttons:
+      - title: Ban tuyển sinh
+        payload: /ban_tuyen_sinh
+      - title: Ban kế hoạch
+        payload: /ban_ke_hoach
+      - title: menu chính
+        payload: /menu_chinh
+  # Phòng đào tạo
+  utter_phong_dao_tao:
+  - text: "Các thầy cô phòng Đào tạo:"
+    image: https://i.imgur.com/MpgqTrW.png
+  utter_phong_dao_tao_01:
+    - text: Chức năng, nhiệm vụ và địa chỉ liên hệ.
+      image: https://i.imgur.com/M0awyca.png
+  utter_phong_dao_tao_02:
+    - text: Các em xem thông tin về phòng Đào tạo của Trường tại đây [http://kythuatcongnghehb.edu.vn/index.php/cac-phong-ban/phong-dao-t-o]
+  # Phòng tổ chức hành chính
+  utter_phong_to_chuc:
+    - text: Các thầy cô phòng Tổ chức hành chính
+      image: https://i.imgur.com/1R51YtJ.jpg
+  utter_phong_to_chuc_01:
+    - text: Chức năng, nhiệm vụ và địa chỉ liên hệ.
+      image: https://i.imgur.com/C0uYjce.png
+  utter_phong_to_chuc_02:    
+    - text: Các em xem thông tin về phòng Tổ chức hành chính của Trường tại đây [http://kythuatcongnghehb.edu.vn/index.php/cac-phong-ban/phong-t-ch-c-hanh-chinh]
+  # Phòng CTHSSV
+  utter_phong_CTHSSV:
+    - text: Các thầy cô phòng Công tác Học sinh Sinh viên
+      image: https://i.imgur.com/1jhodmg.png
+  utter_phong_CTHSSV_01:
+    - text: Chức năng, nhiệm vụ và địa chỉ liên hệ.
+      image: https://i.imgur.com/0S4FDEF.png
+  utter_phong_CTHSSV_02:    
+    - text: Các em xem thông tin về phòng Công tác học sinh sinh viên của Trường tại đây [http://kythuatcongnghehb.edu.vn/index.php/cac-phong-ban/phong-cong-tac-hs-sv]
+  # Ban tuyển sinh
+  utter_ban_tuyen_sinh_01:
+    - text: BAN TUYỂN SINH THUỘC PHÒNG ĐÀO TẠO
+      image: https://i.imgur.com/R22CuJB.png
+  utter_ban_tuyen_sinh_02:    
+    - text: Các em xem thông tin về ban tuyển sinh của Trường tại đây [http://kythuatcongnghehb.edu.vn/index.php/kinh-t/tuy-n-sinh]
+  # Ban kế hoạch  
+  utter_ban_ke_hoach_01:
+    - text: BAN KẾ HOẠCH THUỘC PHÒNG ĐÀO TẠO
+      image: https://i.imgur.com/nxfCj6B.png
+  utter_ban_ke_hoach_02:    
+    - text: Các em xem thông tin về ban kế hoạch của Trường tại đây [http://kythuatcongnghehb.edu.vn/index.php/kinh-t/k-ho-ch-l-ch-thi]
+  utter_cac_phong_ban_end:
+  - text: " về Menu chính hoặc quay lại Các phòng ban"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: quay lại
+      payload: /cac_phong_ban
+# Các khoa của Trường
+  utter_cac_khoa_nghe:
+  - text: CÁC KHOA CỦA TRƯỜNG
+    elements:
+    - title: CÁC KHOA KỸ THUẬT
+      subtitle: Em muốn tìm hiển về khoa kỹ thuật nào của trường?
+      image_url: https://i.imgur.com/ZZOGCIF.jpg
+      buttons: 
+      - title: khoa tin học
+        payload: /khoa_tin_hoc
+      - title: khoa cơ khí
+        payload: /khoa_co_khi
+      - title: khoa điện-điện tử
+        payload: /khoa_dien_dien_tu
+    - title: CÁC KHOA KINH TẾ VÀ KHOA HỌC CƠ BẢN
+      subtitle: Em muốn tìm hiển về khoa Kinh tế hay Khoa học cơ bản?
+      image_url: https://i.imgur.com/HSKtvF2.jpg
+      buttons:
+      - title: khoa kinh tế
+        payload: /khoa_kinh_te
+      - title: khoa học cơ bản
+        payload: /khoa_hoc_co_ban
+      - title: menu chính
+        payload: /menu_chinh
+  # Khoa tin học
+  utter_khoa_tin_hoc:
+  - text: KHOA TIN HỌC
+    elements:
+    - title: Nội dung chính
+      subtitle: Những nội dung chính của khoa Tin học
+      image_url: https://i.imgur.com/hq3EHhB.jpg
+      buttons:
+      - title: các thầy cô
+        payload: /giao_vien_khoa_tin
+      - title: Nhiệm vụ
+        payload: /nhiem_vu_khoa_tin
+      - title: liên hệ
+        payload: /lien_he_khoa_tin
+    - title: Nội dung chính
+      subtitle: Những nội dung chính của khoa Tin học
+      image_url: https://i.imgur.com/Z18YYS9.jpg
+      buttons:
+      - title: Những hoạt động
+        payload: /hoat_dong_khoa_tin
+      - title: hình ảnh học tập
+        payload: /hoc_tap_khoa_tin
+      - title: menu chính
+        payload: /menu_chinh
+  utter_giao_vien_khoa_tin_01:
+    - text: THẦY CÔ GIÁO KHOA TIN HỌC
+      image: https://i.imgur.com/A4VaGEc.jpg
+  utter_giao_vien_khoa_tin_02:    
+    - text: |
+             - Vũ Thanh Hải (Trưởng khoa)
+             - Chu Hải Bình (P.Trưởng khoa)
+             - Nguyễn Thị Giang (Giảng viên)
+             - Phạm Thị Hảo (Giảng viên)
+             - Bùi Cường (Giảng viên)
+             - Phùng Viết Hoà (Giảng viên)
+             - Nguyễn Thị Thuý Nga (Giảng viên) 
+  utter_nhiem_vu_khoa_tin_01:
+    - text: NHIỆM VỤ CỦA KHOA TIN HỌC
+      image: https://i.imgur.com/7RQW9ao.png
+  utter_nhiem_vu_khoa_tin_02:
+    - text: "Các em xem thông tin về nhiệm vụ Khoa Tin Học của Trường tại đây: [http://kythuatcongnghehb.edu.vn/index.php/cac-khoa/khoa-tin-h-c]"
+  utter_lien_he_khoa_tin_01:
+    - text: THÔNG TIN LIÊN HỆ KHOA TIN HỌC
+      image: https://i.imgur.com/U4ShYKy.png
+  utter_lien_he_khoa_tin_02:
+    - text: Các em xem thông tin liên hệ Khoa Tin Học của Trường tại đây [http://kythuatcongnghehb.edu.vn/index.php/cac-khoa/khoa-tin-h-c]
+  utter_hoat_dong_khoa_tin_01:
+    - text: Tiết mục của các em lớp Trung cấp Quản trị mạng - Khoá 18. Trong Hội diễn văn nghệ của Trường.
+      image: https://i.imgur.com/Z18YYS9.jpg
+  utter_hoat_dong_khoa_tin_02:
+    - text: Tiết mục nhảy dân vũ của các em lớp Cao đẳng Quản trị mạng - Khoá 8.
+      image: https://i.imgur.com/aHhGFop.jpg
+  utter_hoat_dong_khoa_tin_03:
+    - text: Cắm trại chào mừng ngày 26/3.
+      image: https://i.imgur.com/Go9d08F.jpg
+  utter_hoat_dong_khoa_tin_04:
+    - text: Cô giáo Chu Hải Bình - Phó trưởng khoa tham gia hiến máu nhân đạo.
+      image: https://i.imgur.com/dvWVMUE.jpg
+  utter_hoat_dong_khoa_tin_05:
+    - text: Vui tết LÀO cùng các bạn du học sinh LÀO.
+      image: https://i.imgur.com/BhuA0FX.jpg
+  utter_hoc_tap_khoa_tin_01:
+    - text: Trong giờ học Tin học văn phòng. Cô Phạm Thị Hảo giảng dạy.
+      image: https://i.imgur.com/rMqZ7NY.jpg
+  utter_hoc_tap_khoa_tin_02:
+    - text: Trong giờ học Lắp giáp và cài đặt máy tính. Lớp cơ sở.
+      image: https://i.imgur.com/l3xcT93.jpg
+  utter_hoc_tap_khoa_tin_03:
+    - text: Đôi bạn thân cùng nhóm.
+      image: https://i.imgur.com/eaQaMbl.jpg
+  # Khoa cơ khí   
+  utter_khoa_co_khi:
+  - text: KHOA CƠ KHÍ
+    elements:
+    - title: Nội dung chính
+      subtitle: Những nội dung chính của khoa Cơ khí
+      image_url: https://i.imgur.com/pUc38V1.jpg
+      buttons:
+      - title: các thầy cô
+        payload: /giao_vien_khoa_co_khi
+      - title: Nhiệm vụ & thành tích
+        payload: /nhiem_vu_khoa_co_khi
+      - title: liên hệ
+        payload: /lien_he_khoa_co_khi
+    - title: Nội dung chính
+      subtitle: Những nội dung chính của khoa cơ khí
+      image_url: https://i.imgur.com/dqwGcfR.jpg
+      buttons:
+      - title: Những hoạt động
+        payload: /hoat_dong_khoa_co_khi
+      - title: hình ảnh học tập
+        payload: /hoc_tap_khoa_co_khi
+      - title: menu chính
+        payload: /menu_chinh
+  utter_giao_vien_khoa_co_khi_01:
+    - text: THẦY CÔ GIÁO KHOA CƠ KHÍ
+      image: https://i.imgur.com/8lWNEIe.jpg
+  utter_giao_vien_khoa_co_khi_02:    
+    - text: |
+             - Tống Kim Trung (Trưởng khoa)
+             - Trương Xuân Toán (P.Trưởng khoa)
+             - Hoàng Tiến Đạt (Giảng viên)
+             - Nguyễn Thị Thanh (Giảng viên)
+             - Nguyễn Văn Lập (Giảng viên)
+             - Bùi Đình Chiểu (Giảng viên)
+             - Nguyễn Hồng Anh (Giảng viên) 
+  utter_nhiem_vu_khoa_co_khi_01:
+    - text: NHIỆM VỤ VÀ THÀNH TÍCH KHOA CƠ KHÍ
+      image: https://i.imgur.com/ZuGvOeP.png
+  utter_nhiem_vu_khoa_co_khi_02:
+    - text: "Các em xem thông tin về nhiệm vụ và thành tích của Khoa Cơ khí của Trường tại đây: [http://kythuatcongnghehb.edu.vn/index.php/cac-khoa/khoa-co-khi]"
+  utter_lien_he_khoa_co_khi_01:
+    - text: THÔNG TIN LIÊN HỆ KHOA CƠ KHÍ
+      image: https://i.imgur.com/HcNErGx.png
+  utter_lien_he_khoa_co_khi_02:
+    - text: Các em xem thông tin liên hệ của Khoa cơ khí của Trường tại đây [http://kythuatcongnghehb.edu.vn/index.php/cac-khoa/khoa-co-khi]
+  utter_hoat_dong_khoa_co_khi_01:
+    - text: Tiết mục của các em lớp Cao đẳng Công nghệ Ô tô - Khoá 2. Trong Cuộc thi tìm hiểu pháp luật về An toàn vệ sinh lao động.
+      image: https://i.imgur.com/VOBvH59.jpg
+  utter_hoat_dong_khoa_co_khi_02:
+    - text: Tiết mục của các em lớp Trung cấp Cơ khí - Khoá 9. Trong Cuộc thi tìm hiểu pháp luật về An toàn vệ sinh lao động.
+      image: https://i.imgur.com/oaaZ05y.jpg
+  utter_hoat_dong_khoa_co_khi_03:
+    - text: Tiết mục của các em lớp Cao đẳng Ô tô - Khoá 8
+      image: https://i.imgur.com/m2vvO2i.jpg
+  utter_hoat_dong_khoa_co_khi_04:
+    - text: Đội bóng chuyền khoa cơ ký tham gia giải chào mừng 90 năm ngày thành lập Đoàn.
+      image: https://i.imgur.com/wxdTqfb.jpg
+  utter_hoc_tap_khoa_co_khi_01:
+    - text: Trong giờ học của lớp Công nghệ Ô tô.
+      image: https://i.imgur.com/dqwGcfR.jpg
+  utter_hoc_tap_khoa_co_khi_02:
+    - text: Trong giờ học của lớp Vận hành máy thi công nền.
+      image: https://i.imgur.com/ZvMNbqd.jpg
+  utter_hoc_tap_khoa_co_khi_03:
+    - text: Giờ thực hành của lớp Vận hành máy thi công nền.
+      image: https://i.imgur.com/nMOO9nT.jpg
+  # Khoa Điện-Điện tử
+  utter_khoa_dien_dien_tu:
+  - text: KHOA ĐIỆN-ĐIỆN TỬ
+    elements:
+    - title: Nội dung chính
+      subtitle: Những nội dung chính của khoa Điện-Điện tử
+      image_url: https://i.imgur.com/x5g6FOR.jpg
+      buttons:
+      - title: các thầy cô
+        payload: /giao_vien_khoa_dien_dien_tu
+      - title: Nhiệm vụ
+        payload: /nhiem_vu_khoa_dien_dien_tu
+      - title: liên hệ
+        payload: /lien_he_khoa_dien_dien_tu
+    - title: Nội dung chính
+      subtitle: Những nội dung chính của khoa Điện-Điện tử
+      image_url: https://i.imgur.com/n0YpJ9Y.jpg
+      buttons:
+      - title: Những hoạt động
+        payload: /hoat_dong_khoa_dien_dien_tu
+      - title: hình ảnh học tập
+        payload: /hoc_tap_khoa_dien_dien_tu
+      - title: menu chính
+        payload: /menu_chinh
+  utter_giao_vien_khoa_dien_dien_tu_01:
+    - text: THẦY CÔ GIÁO KHOA ĐIỆN-ĐIỆN TỬ
+      image: https://i.imgur.com/1mdj63S.jpg
+  utter_giao_vien_khoa_dien_dien_tu_02:    
+    - text: |
+             - Lê Anh Đài (Trưởng khoa)
+             - Nguyễn Văn Tình (P.Trưởng khoa)
+             - Nguyễn Thị Tuyến (Giảng viên)
+             - Nguyễn Diệu Linh (Giảng viên)
+             - Nguyễn Thị Tuyết (Giảng viên)
+             - Lê Văn Nam (Giảng viên)
+             - Nguyễn Thị Vân (Giảng viên)
+             - Nguyễn Thị Kim Huệ (Giảng viên)
+             - Nguyễn Thị Ngân (Giảng viên)
+  utter_nhiem_vu_khoa_dien_dien_tu_01:
+    - text: NHIỆM VỤ CỦA KHOA ĐIỆN-ĐIỆN TỬ
+      image: https://i.imgur.com/wyJF21Z.png
+  utter_nhiem_vu_khoa_dien_dien_tu_02:
+    - text: Các em xem thông tin về nhiệm vụ của Khoa Điện-Điện tử của Trường tại đây [http://kythuatcongnghehb.edu.vn/index.php/cac-khoa/khoa-di-n-di-n-t]
+  utter_lien_he_khoa_dien_dien_tu_01:
+    - text: THÔNG TIN LIÊN HỆ KHOA ĐIỆN-ĐIỆN TỬ
+      image: https://i.imgur.com/LuJ17TB.png
+  utter_lien_he_khoa_dien_dien_tu_02:
+    - text: Các em xem thông tin liên hệ Khoa Điện-Điện tử của Trường tại đây [http://kythuatcongnghehb.edu.vn/index.php/cac-khoa/khoa-di-n-di-n-t]
+  utter_hoat_dong_khoa_dien_dien_tu_01:
+    - text: Tiết mục của các em lớp Trung cấp Điện tử - Khoá 18. Trong Hội diễn văn nghệ của Trường.
+      image: https://i.imgur.com/fwylVXH.jpg
+  utter_hoat_dong_khoa_dien_dien_tu_02:
+    - text: Đội bóng đá khoa Điện tham gia giải chào mừng 90 năm thành lập đoàn.
+      image: https://i.imgur.com/8HtAtcC.jpg
+  utter_hoat_dong_khoa_dien_dien_tu_03:
+    - text: Đội bóng chuyền khoa Điện tham gia giải chào mừng 90 năm thành lập đoàn.
+      image: https://i.imgur.com/EpKuipd.jpg
+  utter_hoat_dong_khoa_dien_dien_tu_04:
+    - text: Tiết mục của các em lớp Cao đẳng Điện tử - Khoá 2. Trong Hội diễn văn nghệ của Trường.
+      image: https://i.imgur.com/t8zPyeb.jpg
+  utter_hoat_dong_khoa_dien_dien_tu_05:
+    - text: Trận tranh giải nhất môn bóng đá nam giữa khoa Điện-Điện tử và khoa Cơ khí chào mừng 90 năm thành lập đoàn.
+      image: https://i.imgur.com/0MJa34i.jpg
+  utter_hoc_tap_khoa_dien_dien_tu_01:
+    - text: Trong giờ học của lớp Điện
+      image: https://i.imgur.com/Wr645f9.jpg
+  utter_hoc_tap_khoa_dien_dien_tu_02:
+    - text: Thầy Lê Văn Nam trong hội thao dạy nghề toàn quốc.
+      image: https://i.imgur.com/cw4jjpE.jpg
+  utter_hoc_tap_khoa_dien_dien_tu_03:
+    - text: Trong giờ học lớp Điện tử
+      image: https://i.imgur.com/9oFa4GH.jpg
+  utter_hoc_tap_khoa_dien_dien_tu_04:
+    - text: Cô Nguyễn Thị Ngân trong hội thao dạy nghề toàn quốc.
+      image: https://i.imgur.com/BCAtduS.jpg
+  # Khoa Kinh tế
+  utter_khoa_kinh_te:
+  - text: KHOA KINH TẾ
+    elements:
+    - title: Nội dung chính
+      subtitle: Những nội dung chính của khoa Kinh tế
+      image_url: https://i.imgur.com/DfPykPO.jpg
+      buttons:
+      - title: các thầy cô
+        payload: /giao_vien_khoa_kinh_te
+      - title: Nhiệm vụ
+        payload: /nhiem_vu_khoa_kinh_te
+      - title: liên hệ
+        payload: /lien_he_khoa_kinh_te
+    - title: Nội dung chính
+      subtitle: Những nội dung chính của khoa Kinh tế
+      image_url: https://i.imgur.com/dLjTbuf.jpg
+      buttons:
+      - title: Những hoạt động
+        payload: /hoat_dong_khoa_kinh_te
+      - title: hình ảnh học tập
+        payload: /hoc_tap_khoa_kinh_te
+      - title: menu chính
+        payload: /menu_chinh
+  utter_giao_vien_khoa_kinh_te_01:
+    - text: THẦY CÔ GIÁO KHOA KINH TẾ
+      image: https://i.imgur.com/hl5v6ZH.png
+  utter_giao_vien_khoa_kinh_te_02:    
+    - text: |
+             - Vương  Thị Tuyết (Trưởng khoa)
+             - Nguyễn Thị Tuyết Mai (P.Trưởng khoa)
+             - Nguyễn Thị Linh (Giảng viên)
+             - Nguyễn Thị Thu (Giảng viên)
+             - Nguyễn Thị Huệ (Giảng viên)             
+  utter_nhiem_vu_khoa_kinh_te_01:
+    - text: NHIỆM VỤ CỦA KHOA KINH TẾ
+      image: https://i.imgur.com/CIKZ5vr.png
+  utter_nhiem_vu_khoa_kinh_te_02:
+    - text: Các em xem thông tin về nhiệm vụ của Khoa Kinh tế của Trường tại đây [http://kythuatcongnghehb.edu.vn/index.php/cac-khoa/khoa-kinh-t]  
+  utter_lien_he_khoa_kinh_te_01:
+    - text: THÔNG TIN LIÊN HỆ KHOA KINH TẾ
+      image: https://i.imgur.com/x7EZ0qU.png
+  utter_lien_he_khoa_kinh_te_02:
+    - text: Các em xem thông tin liên hệ Khoa Kinh tế của Trường tại đây [http://kythuatcongnghehb.edu.vn/index.php/cac-khoa/khoa-kinh-t]  
+  utter_hoat_dong_khoa_kinh_te_01:
+    - text: Tiết mục múa sạp của khoa Kinh tế trong hội trại chào mừng ngày 26/3
+      image: https://i.imgur.com/BOxmKUn.jpg
+  utter_hoat_dong_khoa_kinh_te_02:
+    - text: Giao lưu văn nghệ kỷ niệm 90 năm ngày thành lập Đoàn.
+      image: https://i.imgur.com/Z0f8kKR.jpg
+  utter_hoat_dong_khoa_kinh_te_03:
+    - text: Giao lưu văn nghệ kỷ niệm 90 năm ngày thành lập Đoàn.
+      image: https://i.imgur.com/utH1221.jpg
+  utter_hoat_dong_khoa_kinh_te_04:
+    - text: Đội bóng chuyền nữ khoa Kinh tế tham gia giải bóng chuyền nữ. Kỷ niệm 90 năm ngày thành lập Đoàn.
+      image: https://i.imgur.com/511ssHb.jpg
+  utter_hoat_dong_khoa_kinh_te_05:
+    - text: Đội cầu lông nữ khoa Kinh tế tham gia giải cầu lông nữ. Kỷ niệm 90 năm ngày thành lập Đoàn.
+      image: https://i.imgur.com/0BUvZo0.jpg  
+  utter_hoc_tap_khoa_kinh_te_01:
+    - text: Trong giờ học của lớp Cao đẳng Kế toán doanh nghiệp
+      image: https://i.imgur.com/eBFR2ec.png
+  utter_hoc_tap_khoa_kinh_te_02:
+    - text: Trong giờ học Tin học lớp Kế toán doanh nghiệp. Thầy giáo Phạm Thanh Hải (Trưởng phòng đào tạo) giảng dạy.
+      image: https://i.imgur.com/8aFCXdN.jpg
+  utter_hoc_tap_khoa_kinh_te_03:
+    - text: Trong giờ học của lớp Trung cấp Kế toán doanh nghiệp
+      image: https://i.imgur.com/PwZ1nRW.jpg
+  # Khoa học cơ bản  
+  utter_khoa_hoc_co_ban:
+  - text: KHOA HỌC CƠ BẢN
+    elements:
+    - title: Nội dung chính
+      subtitle: Những nội dung chính của khoa học cơ bản
+      image_url: https://i.imgur.com/jZoINzF.jpg
+      buttons:
+      - title: các thầy cô
+        payload: /giao_vien_khoa_hoc_co_ban
+      - title: Nhiệm vụ
+        payload: /nhiem_vu_khoa_hoc_co_ban
+      - title: liên hệ
+        payload: /lien_he_khoa_hoc_co_ban
+    - title: Nội dung chính
+      subtitle: Những nội dung chính của khoa học cơ bản
+      image_url: https://i.imgur.com/ALxNFJA.jpg
+      buttons:
+      - title: Những hoạt động
+        payload: /hoat_dong_khoa_hoc_co_ban
+      - title: hình ảnh học tập
+        payload: /hoc_tap_khoa_hoc_co_ban
+      - title: menu chính
+        payload: /menu_chinh
+  utter_giao_vien_khoa_hoc_co_ban_01:
+    - text: THẦY CÔ GIÁO KHOA HỌC CƠ BẢN
+      image: https://i.imgur.com/ueMrtlb.png
+  utter_giao_vien_khoa_hoc_co_ban_02:    
+    - text: |
+             - Vũ Đại Nghĩa (Trưởng khoa)
+             - Quách Thị Đào (P.Trưởng khoa)
+             - Nguyễn Thị Minh (Giảng viên)
+             - Hoàng Thị Liên (Giảng viên)
+             - Đinh Công Chính (Giảng viên) 
+             - Vũ Trường Long (Giảng viên) 
+             - Nguyến Thị Thanh (Giảng viên)
+             - Nguyễn thị Thu Thảo (Giảng viên)
+  utter_nhiem_vu_khoa_hoc_co_ban_01:
+    - text: NHIỆM VỤ CỦA KHOA HỌC CƠ BẢN
+      image: https://i.imgur.com/ncfG7ZE.png
+  utter_nhiem_vu_khoa_hoc_co_ban_02:
+    - text: Các em xem thông tin về nhiệm vụ của Khoa học cơ bản của Trường tại đây [http://kythuatcongnghehb.edu.vn/index.php/cac-khoa/khoa-khoa-h-c-co-b-n]
+  utter_lien_he_khoa_hoc_co_ban_01:
+    - text: THÔNG TIN LIÊN HỆ KHOA HỌC CƠ BẢN
+      image: https://i.imgur.com/9tFQ6RK.png
+  utter_lien_he_khoa_hoc_co_ban_02:
+    - text: Các em xem thông tin liên hệ Khoa học cơ bản của Trường tại đây [http://kythuatcongnghehb.edu.vn/index.php/cac-khoa/khoa-khoa-h-c-co-b-n]
+  utter_hoat_dong_khoa_hoc_co_ban_01:
+    - text: Tiết mục của các em học khoa cơ bản. Trong Hội diễn văn nghệ của Trường.
+      image: https://i.imgur.com/3wtRZWz.jpg
+  utter_hoat_dong_khoa_hoc_co_ban_02:
+    - text: Tiết mục của các em học khoa cơ bản. Trong Hội diễn văn nghệ của Trường.
+      image: https://i.imgur.com/OC0VHTS.jpg
+  utter_hoat_dong_khoa_hoc_co_ban_03:
+    - text: Tiết mục của các em học khoa cơ bản. Trong Hội diễn văn nghệ của Trường.
+      image: https://i.imgur.com/ieqLw0G.jpg
+  utter_hoat_dong_khoa_hoc_co_ban_04:
+    - text: Tiết mục của các em học khoa cơ bản.
+      image: https://i.imgur.com/JRVdX98.jpg
+  utter_hoat_dong_khoa_hoc_co_ban_05:
+    - text: Tiết mục của các em học khoa cơ bản. Trong Hội diễn văn nghệ của Trường.
+      image: https://i.imgur.com/Fh7Opog.jpg
+  utter_hoc_tap_khoa_hoc_co_ban_01:
+    - text: Trong giờ học thực hành của lớp Hướng dẫn du lịch.
+      image: https://i.imgur.com/AnU58oy.jpg
+  utter_hoc_tap_khoa_hoc_co_ban_02:
+    - text: Trong giờ học môn Chính trị của lớp Cao đẳng Quản trị mạng - Khoá 8.
+      image: https://i.imgur.com/16TEn8p.jpg
+  utter_hoc_tap_khoa_hoc_co_ban_03:
+    - text: Trong giờ học thực hành của lớp Hướng dẫn du lịch.
+      image: https://i.imgur.com/4kwmuDA.jpg
+  utter_hoc_tap_khoa_hoc_co_ban_04:
+    - text: Trong giờ học thực hành của lớp Hướng dẫn du lịch.
+      image: https://i.imgur.com/9JGbG2b.jpg
+  utter_cac_khoa_nghe_end:
+  - text: "Về Menu chính hoặc quay lại Các khoa"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: quay lại
+      payload: /cac_khoa_nghe
+# Tổ chức đoàn thể
+  utter_doan_the:
+  - text: TỔ CHỨC ĐOÀN THỂ
+    elements:
+    - title: Tổ chức đoàn thể Trường
+      subtitle: Tổ chức đoàn thể của trường bao gồm
+      image_url: https://i.imgur.com/7rAyuRf.png
+      buttons: 
+      - title: công tác đảng
+        payload: /cong_tac_dang
+      - title: công tác công đoàn
+        payload: /cong_tac_cong_doan
+      - title: đoàn TN - HSSV
+        payload: /doan_tn_hssv
+  utter_cong_tac_dang:
+  - text: CHI BỘ TỔ CHỨC THÀNH CÔNG ĐẠI HỘI CHI BỘ LẦN THỨ V, NHIỆM KÝ 2020-2022
+    image: https://i.imgur.com/Gq9Jbyi.jpg
+  utter_cong_tac_dang_01:
+  - text: |
+          Chi uỷ Chị bộ TC-HC gồm 03 đồng chí:
+          - Nguyễn Phùng Nam (Bí thư)
+          - Trần Thị Thu Trang (P.Bí thư)
+          - Lương Lệ Huyền (Chi Uỷ viên)
+    image: https://i.imgur.com/6DGtAfI.jpg
+  utter_cong_tac_dang_02:
+  - text: |
+          Chi uỷ Chị bộ ĐT-CTHSSV gồm 03 đồng chí:
+          - Phạm Thanh Hải (Bí thư)
+          - Quách Thuỳ Dương (P.Bí thư)
+          - Phạm Văn Kiên (Chi Uỷ viên)
+    image: https://i.imgur.com/ZBLZ2ZK.jpg
+  utter_cong_tac_dang_03:
+  - text: |
+          Chi uỷ Chị bộ Đ-ĐT gồm 03 đồng chí:
+          - Lê Anh Đài (Bí thư)
+          - Nguyễn Văn Tình (P.Bí thư)
+          - Trần Thị Thuỳ Vân (Chi Uỷ viên)
+    image: https://i.imgur.com/ueAPPQb.jpg
+  utter_cong_tac_dang_04:
+  - text: |
+          Chi uỷ Chị bộ TH-CK gồm 02 đồng chí:
+          - Tống Kim Trung (Bí thư)
+          - Chu Hải Bình (P.Bí thư)
+    image: https://i.imgur.com/0dZh2U2.jpg
+  utter_cong_tac_dang_05:
+  - text: |
+          Chi uỷ Chị bộ KT- KHCB gồm 02 đồng chí:
+          - Vũ Đại Nghĩa (Bí thư)
+          - Vương Thị Tuyết (P.Bí thư)
+    image: https://i.imgur.com/ueAPPQb.jpg
+  utter_cong_tac_cong_doan:
+  - text: CÔNG TÁC CÔNG ĐOÀN
+    elements:
+    - title: Các hoạt động
+      subtitle: Đoàn thiện nguyện thăm hỏi tặng quà hssv và Đại hội Đoàn Trường.
+      image_url: https://i.imgur.com/TN3Hhby.jpg
+      buttons: 
+      - title: thăm hỏi tặng quà hssv
+        payload: /cong_tac_cong_doan_01
+      - title: đại hội công đoàn
+        payload: /cong_tac_cong_doan_02
+      - title: menu chính
+        payload: /menu_chinh
+  utter_cong_tac_cong_doan_01:
+  - text: Đoàn thiện nguyện của Trung tâm thẩm định sáng chế thuộc Cục sở hữu trí tuệ Việt Nam đã tới thăm hỏi và tặng quà cho 05 học sinh sinh viên có hoàn cảnh khó khăn đang học tập tại trường và 01 học sinh sinh viên bị tai nạn đang nằm điều trị tại bệnh viện đa khoa tỉnh. Mỗi phần quà trị giá 1.000.000 đồng tiền mặt và 200.000 đồng nhu yếu phẩm cần thiết.
+    image: https://i.imgur.com/NhCCx5j.jpg
+  utter_cong_tac_cong_doan_02:
+  - text: ĐẠI HỘI CÔNG ĐOÀN TRƯỜNG CAO ĐẲNG KỸ THUẬT CÔNG NGHỆ HÒA BÌNH NHIỆM KỲ 2016-2021
+    image: https://i.imgur.com/xs5s6Lz.jpg
+  utter_cong_tac_cong_doan_021:
+  - text: "Đ/c: Trần Thị Thanh Tú – Phó Chủ Tịch Công đoàn đọc báo cáo tổng kết phong trào hoạt động Công đoàn nhiệm kỳ 2011–2016 và phương hướng nhiệm kỳ 2016-2021"
+    image: https://i.imgur.com/d0Z10tC.jpg
+  utter_cong_tac_cong_doan_022:
+  - text: "Đ/c: Trương Tuấn Dũng Bí Thư Đảng ủy, Hiệu trưởng nhà trường. Phát biểu chỉ đạo Đại hội."
+    image: https://i.imgur.com/vs7Oc3G.jpg
+  utter_cong_tac_cong_doan_023:
+  - text: "Đ/c: Nguyễn Thanh Vân – Chủ tịch Công đoàn tỉnh."
+    image: https://i.imgur.com/xtyKgHS.jpg
+  utter_cong_tac_cong_doan_024:
+  - text: |
+          Kết quả tại Đại hội đã bầu ra 05 đồng chí vào Ban chấp hành:
+          1. Lê Thanh Hải – Phó Hiệu trưởng
+          2. Trần Thị Thanh Tú – Phòng Đào Tạo
+          3. Trần Thị Thu Trang – P.Phòng Tổ Chức
+          4. Trần Nam Trung – P.Phòng CTHSSV
+          5. Phạm Văn Kiên – P.Phòng Đào tạo
+    image: https://i.imgur.com/sFebWwM.jpg
+  utter_doan_tn_hssv:
+  - text: CÔNG TÁC ĐOÀN THANH NIÊN HỌC SINH SINH VIÊN
+    elements:
+    - title: Các hoạt động
+      subtitle: Các hoạt động của Đoàn Thanh niên Học sinh sinh viên.
+      image_url: https://i.imgur.com/fEZniVG.jpg
+      buttons: 
+      - title: kết nạp đoàn viên 2021
+        payload: /ket_nap_doan_vien
+      - title: các hoạt động
+        payload: /cac_hoat_dong_doan
+      - title: menu chính
+        payload: /menu_chinh
+  utter_ket_nap_doan_vien:
+  - text: Toàn cảnh buổi lễ
+    image: https://i.imgur.com/MZMxwp4.jpg
+  utter_ket_nap_doan_vien_01:
+  - text: Trao thẻ đoàn và Sổ đoàn cho các Đoàn viên mới
+    image: https://i.imgur.com/xni8R42.jpg
+  utter_ket_nap_doan_vien_02:
+  - text: Đoàn viên mới đọc lời hứa trước cờ
+    image: https://i.imgur.com/zBQauGG.jpg
+  utter_cac_hoat_dong_doan:
+  - text: "Đ/c: Lê Thanh Hải - Phó HTPT cùng các đồng chí lãnh đạo các ban ngành đoàn thể tổ chức thăm hỏi, tặng quà."
+    image: https://i.imgur.com/fugnJYO.jpg
+  utter_cac_hoat_dong_doan_01:
+  - text: Hội nghị tuyên truyền phòng chống tệ nạn xã hôi, công tác đảm bảo an ninh trật tự và y tế học đường năm học 2020-2021.
+    image: https://i.imgur.com/pzRaVBD.jpg
+  utter_cac_hoat_dong_doan_02:
+  - text: Bóng đá nam (Giải chào mừng ngày nhà giáo việt nam 20-11)
+    image: https://i.imgur.com/JMrWk6y.jpg
+  utter_cac_hoat_dong_doan_03:
+  - text: Bóng chuyền nữ (Giải chào mừng ngày nhà giáo việt nam 20-11)
+    image: https://i.imgur.com/RqpvnLl.jpg
+  utter_cac_hoat_dong_doan_04:
+  - text: Văn nghệ (Giải chào mừng ngày nhà giáo việt nam 20-11)
+    image: https://i.imgur.com/WDets2P.jpg
+  utter_cac_hoat_dong_doan_05:
+  - text: Cầu lông đôi nữ (Giải chào mừng kỷ niệm 90 năm thành lập Đoàn)
+    image: https://i.imgur.com/FbmWwgu.jpg
+  utter_cac_hoat_dong_doan_06:
+  - text: Bóng chuyền nam (Giải chào mừng kỷ niệm 90 năm thành lập Đoàn)
+    image: https://i.imgur.com/wxdTqfb.jpg
+  utter_cac_hoat_dong_doan_07:
+  - text: "Đ/c: Lê Thanh Hải - Phó BTĐU - Phó hiệu trưởng PT nhà trường trao giải Cầu lông cho các đội đạt giải."
+    image: https://i.imgur.com/mN7XDRK.jpg
+  utter_cac_hoat_dong_doan_08:
+  - text: "Đ/c: Lê Thanh Hải - Phó BTĐU - Phó hiệu trưởng PT nhà trường trao giải Bóng chuyền cho các đội đạt giải."
+    image: https://i.imgur.com/ejDHdL9.jpg
+  utter_doan_the_end:
+  - text: "Về Menu chính hoặc quay lại Đoàn thể"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: quay lại
+      payload: /doan_the
+# Tư vấn trực tiếp
+  utter_tu_van_truc_tiep_01:
+  - text: SỐ ĐIỆN THOẠI HỖ TRỢ
+    elements:
+    - title: 'HỖ TRỢ - TƯ VẤN'
+      subtitle: "Em hãy đặt lịch tư vấn như trên. Hoặc có thể gọi cho các phòng ban sau:"
+      image_url: https://i.imgur.com/XkaUoJe.jpg
+      buttons: 
+      - title: Đặt lịch tư vấn
+        payload: /dat_lich
+      - title: Lấy SĐT các phòng ban
+        payload: /tu_van_truc_tiep_02
+      - title: menu chinh
+        payload: /menu_chinh
+  utter_tu_van_truc_tiep_02:
+  - text: HỖ TRỢ - TƯ VẤN
+    elements:
+    - title: SỐ ĐIỆN THOẠI CÁC PHÒNG
+      subtitle: Em muốn liên hệ với phòng hành chính nào?
+      image_url: https://i.imgur.com/cZT7uFh.jpg
+      buttons: 
+      - title: Phòng Đào tạo
+        payload: /tu_van_truc_tiep_dao_tao
+      - title: Phòng CTHSSV
+        payload: /tu_van_truc_tiep_cong_tac_hs_sv
+      - title: Phòng Tổ chức
+        payload: /tu_van_truc_tiep_to_chuc
+    - title: SỐ ĐIỆN THOẠI CÁC BAN
+      subtitle: Em muốn liên hệ với ban hành chính nào?
+      image_url: https://i.imgur.com/ShW2YOA.png 
+      buttons:
+      - title: Ban tuyển sinh
+        payload: /tu_van_truc_tiep_tuyen_sinh
+      - title: Đoàn thanh niên
+        payload: /tu_van_truc_tiep_doan_the
+      - title: menu chính
+        payload: /menu_chinh
+  utter_tu_van_truc_tiep_tuyen_sinh:
+  - text: 'Số điện thoại: 02183888888'
+    elements:
+    - title: "Ban tuyển sinh"
+      subtitle: Để được tư vấn tuyển sinh trực tiếp.
+      image_url: https://i.imgur.com/f3jU3jP.png  
+  utter_tu_van_truc_tiep_dao_tao:
+  - text: 'Số điện thoại: 02183333333'
+    elements:
+    - title: "Phòng đào tạo"
+      subtitle: "Để được tư vấn về Đào tạo như: Học phí, đối tượng ưu tiên, khu vực tuyển sinh, ..."
+      image_url: https://i.imgur.com/aWYbXzI.png
+  utter_tu_van_truc_tiep_to_chuc:
+  - text: 'Số điện thoại: 02193111111'
+    elements:
+    - title: "Phòng tổ chức hành chính"
+      subtitle: "Để được tư vấn về: Cơ sở vật chất, học bổng, trợ cấp,..."
+      image_url: https://i.imgur.com/NFmvUPB.png
+  utter_tu_van_truc_tiep_cong_tac_hs_sv:
+  - text: 'Số điện thoại: 02183222222'
+    elements:
+    - title: "Phòng công tác học sinh sinh viên"
+      subtitle: "Để được tư vấn về các vấn đề như: Ký túc xá, thư viện, căng tin,..."
+      image_url: https://i.imgur.com/DhjQt8I.jpg
+  utter_tu_van_truc_tiep_doan_the:
+  - text: 'Số điện thoại: 02183444444'
+    elements:
+    - title: "Ban chấp hành chi đoàn"
+      subtitle: "Để được tư vấn các vấn đề liên quan đến đoàn thể"
+      image_url: https://i.imgur.com/7rAyuRf.png
+  utter_tu_van_truc_tiep_end:
+  - text: "Về Menu chính hoặc quay lại Số điện thoại hỗ trợ"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: quay lại
+      payload: /tu_van_truc_tiep_01
+# Chuẩn bị hồ sơ
+  utter_chuan_bi_ho_so_01:
+  - text: Học tại trường em cần không có tiền án tiền sự, có bằng tốt nghiệp THPT, bằng bổ túc văn hóa hoặc tương đương là được làm hồ sơ xét tuyển tại trường. Nội dung, cách làm, thắc mắc,... về hồ sơ xét tuyển được hướng dẫn đầy đủ tại đây.
+    elements:
+    - title: HỒ SƠ VÀ HƯỚNG DẪN
+      subtitle: "Hồ sơ và hướng dẫn làm hồ sơ"
+      image_url: https://i.imgur.com/DkmOkyK.jpg
+      buttons:
+      - title: hồ sơ xét tuyển
+        payload: /chuan_bi_ho_so_02
+      - title: hướng dẫn làm hồ sơ
+        payload: /chuan_bi_ho_so_03
+      - title: nộp hồ sơ
+        payload: /chuan_bi_ho_so_05
+    - title: NHỮNG THẮC MẮC THƯỜNG GẶP
+      subtitle: Giải đáp những thắc mắc thường gặp.
+      image_url: https://i.imgur.com/xZUfNHe.jpg
+      buttons:
+      - title: làm hồ sơ giúp bạn
+        payload: /chuan_bi_ho_so_04
+      - title: nộp hồ sơ từ xa
+        payload: /chuan_bi_ho_so_06
+      - title: bản đồ trường
+        payload: /ban_do_truong
+  utter_chuan_bi_ho_so_021:
+  - text: "Một bộ hồ sơ nhập học đầy đủ bao gồm:"    
+  utter_chuan_bi_ho_so_022:
+  - text: "- 01 Phiếu Đăng ký xét tuyển mẫu tải về tại đây: http://kythuatcongnghehb.edu.vn/images/index.php/kho-tai-li-u/viewdownload/5-ta-i-lia-u-kha-c/10-phia-u-ng-ka-ha-c-ngha/Phieu_%C4%91%C4%83ng_k%C3%BD_x%C3%A9t_tuy%E1%BB%83n_h%E1%BB%8Dc_ngh%E1%BB%81_2021.doc"
+    image: https://i.imgur.com/2EkPwgc.png  
+  utter_chuan_bi_ho_so_023:
+  - text: |
+          - 03 Bản sao y chứng thực: Học bạ THPT, THCS hoặc tương đương.
+          - 03 Bản sao y chứng thực bằng tốt nghiệp THPT, THCS hoặc tương đương (giấy chứng nhận tốt nghiệp tạm thời đối với thí sinh tốt nghiệp năm 2021)
+    image: https://i.imgur.com/ZdVn6fH.jpg  
+  utter_chuan_bi_ho_so_024:
+  - text: |
+          - 03 Bản sao y chứng thực Giấy khai sinh.
+          - 04 anh 3x4, 04 ảnh 4x6.
+    image: https://i.imgur.com/XNXj3Qx.png
+  utter_chuan_bi_ho_so_025:
+  - text: "- 03 Bản hồ sơ đối tượng ưu tiên (nếu có) gồm: Giấy chứng nhận ưu tiên, sổ hộ khẩu."
+    image: https://i.imgur.com/sDATO9o.png  
+  utter_chuan_bi_ho_so_026:
+  - text: "- 01 học bạ THCS (bản chính) nếu đăng ký học trình độ vắn hóa THPT."
+    image: https://i.imgur.com/u2lrQdb.jpg
+  utter_chuan_bi_ho_so_03:
+  - text: "Em tự làm hoặc nhờ người thân. Nếu không em có thể đến trường hay gọi theo số: 02183601259 (ban tuyển sinh) các thầy cô sẽ giúp em hoàn thiện sơm hồ sơ nhé."
+  utter_chuan_bi_ho_so_04:
+  - text: Chỉ cần hồ sơ của bạn em đầy đủ đúng quy định xét tuyển là được xét tuyển.
+  utter_chuan_bi_ho_so_05:
+  - text: "Nộp hồ sơ tại: Ban tuyển sinh – Phòng Đào tạo – Trường Cao đẳng Kỹ thuật Công nghệ Hòa Bình. Gặp các thầy cô phụ trách Tuyển sinh và Đào tạo."
+  utter_chuan_bi_ho_so_06:
+  - text: |
+          Em có thể chuyển phát hồ sơ đến Trường theo địa chỉ: 
+           - Ban tuyển sinh – Phòng Đào tạo – Trường Cao đẳng Kĩ thuật Công nghệ Hòa Bình. 
+           - Số điện thoại: 02183601259
+          Thầy cô sẽ kiểm tra hồ sơ của em, nếu đầy đủ sẽ tiến hành xét tuyển theo quy định của nhà Trường.
+  utter_ban_do_truong:
+  - text: Bản đồ vị trí của Trường.
+    image: https://i.imgur.com/4ZrrawH.png
+  utter_ban_do_truong_01:
+  - text: "Các em ấn vào link này để xác định đường đi và vị trí của Trường: https://goo.gl/maps/TBqXWoLXrKV777q66"
+  utter_chuan_bi_ho_so_end:
+  - text: "Về Menu chính hoặc quay lại Chuẩn bị hồ sơ"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: quay lại
+      payload: /chuan_bi_ho_so_01
+# Các ngành nghề  
+  utter_cac_nganh_nghe_01:
+  - text: "Em có thể tham khảo các ngành nghề tại đây: https://drive.google.com/file/d/1-edzwUG-AU9TqSTUxsb1R8IpEbWXjuar/view?usp=sharing"
+    image: https://i.imgur.com/9zkRuhN.png
+  utter_cac_nganh_nghe_02:
+  - text:  Hi vọng sẽ có ngành nghề em yêu thích. 
+  utter_cac_nganh_nghe_end:
+  - text: "Về Menu chính hoặc quay lại Các ngành nghề đào tạo"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: quay lại
+      payload: /cac_nganh_nghe
+# Khu Ký túc xá
+  utter_khu_KTX:
+  - text: KHUÔN VIÊN KÝ TÚC XÁ
+    elements:
+    - title: KHUÔN VIÊN KÝ TÚC XÁ
+      subtitle: Khuôn viên Ký túc xá bao gồm
+      image_url: https://i.imgur.com/gCh49SK.jpg
+      buttons:
+      - title: toà nhà ký túc xá 
+        payload: /KTX
+      - title: căng tin
+        payload: /cang_tin      
+    - title: KHUÔN VIÊN KÝ TÚC XÁ
+      subtitle: Khuôn viên Ký túc xá bao gồm
+      image_url: https://i.imgur.com/hq4U4mM.jpg
+      buttons:
+      - title: nhà khách
+        payload: /nha_khach
+      - title: sân tập thể thao
+        payload: /san_tap_the_thao
+  utter_KTX:
+  - text: KÝ TÚC XÁ
+    elements:
+    - title: GIỚI THIỆU VÀ HỖ TRỢ
+      subtitle: Giới thiệu và hỗ trợ hssv ở ký túc xá.
+      image_url: https://i.imgur.com/758KHcf.jpg
+      buttons:
+      - title: giới thiệu ktx
+        payload: /gioi_thieu_ktx
+      - title: các khoản phí
+        payload: /phi_ktx
+      - title: an ninh & vệ sinh
+        payload: /an_ninh_ve_sinh
+    - title: ĐĂNG KÝ VÀ MONG MUỐN
+      subtitle: Hướng dẫn đăng ký và giải đáp những thắc mắc thường gặp về KTX.
+      image_url: https://i.imgur.com/6JSAqKo.jpg
+      buttons:
+      - title: đăng ký
+        payload: /dang_ky_ktx
+      - title: hướng dẫn
+        payload: /huong_dan_ktx
+      - title: menu chính
+        payload: /menu_chinh
+  utter_gioi_thieu_ktx:
+  - text: Toà nhà Ký túc xá nằm tại khuôn viên của Trường.
+    image: https://i.imgur.com/Mk2zQhi.jpg
+  utter_gioi_thieu_ktx_01:
+  - text: Toà nhà Ký túc xá gồm 3 tầng, 60 phòng.
+    image: https://i.imgur.com/6JSAqKo.jpg
+  utter_gioi_thieu_ktx_02:
+  - text: Khang trang, đầy đủ tiện nghi.
+    image: https://i.imgur.com/w5StupS.jpg
+  utter_gioi_thieu_ktx_03:
+  - text: Mỗi phòng đầy đủ điều kiện để ở từ 6 đến 8 người.
+    image: https://i.imgur.com/VDAKNZl.jpg
+  utter_gioi_thieu_ktx_04:
+  - text: Có mạng Internet để phục vụ các em học tập và giải trí.
+    image: https://i.imgur.com/JmIAGXQ.jpg
+  utter_phi_ktx: 
+  - text: "Ở Ký túc xá tại Trường hoàn toàn miễn phí, ngoài ra còn nhận được các khoản chính sách và hỗ trợ sau:"
+  utter_phi_ktx_01:
+  - text: "Các em được hưởng chính sách nội trú theo quyết định 53/QĐ-TTg ngày 20/10/2015 của thủ tướng chính phủ. Chi tiết xem ở đây: [https://thuvienphapluat.vn/van-ban/Giao-duc/Quyet-dinh-53-2015-QD-TTg-chinh-sach-noi-tru-hoc-sinh-sinh-vien-hoc-cao-dang-trung-cap-294053.aspx]" 
+    image: https://i.imgur.com/zhHpsyP.png
+  utter_phi_ktx_02:
+  - text: |
+          Các khoản hỗ trợ khác:
+          - Được hỗ trợ 1.000.000 đồng/1 khoá học để mua đồ dùng cá nhân.
+          - Hỗ trợ đi lại từ Trường về Gia đình và ngược lại từ 200.000 đồng đến 300.000 đồng/HSSV/năm.
+  utter_an_ninh_ve_sinh:
+  - text: Ký túc xá được các thầy cô phòng Công tác học sinh sinh viên phụ trách.
+    image: https://i.imgur.com/1jhodmg.png
+  utter_an_ninh_ve_sinh_01:
+  - text: |
+          - Cô Nguyễn Thị Hằng - Trưởng ban KTX (Ngoài cùng bên phải)
+          - Cô Nguyễn Thị Nga - P.Trưởng ban KTX (Ngoài cùng bên trái)
+          - Cùng với 2 bảo vệ nhiệm vụ đảm bảo an ninh cho Ký túc xá cả ngày và đêm.
+  utter_an_ninh_ve_sinh_02:
+  - text: Trường cũng liên kết với Công an Phường Dân chủ để đảm bảo an ninh cho các em.
+    image: https://i.imgur.com/OF2yY10.jpg
+  utter_an_ninh_ve_sinh_03:
+  - text: Tất cả hssv ở KTX đều phải tuân thủ nội quy, nếu vi phạm phải viết bảng tường trình. Tuỳ mức độ vi phạm sẽ sử lý theo nội quy.
+    image: https://i.imgur.com/47MWyQZ.png
+  utter_an_ninh_ve_sinh_04:
+  - text: Khi giao phòng cho các em, phòng đều sạch sẽ, khang trang.
+    image: https://i.imgur.com/VDAKNZl.jpg
+  utter_an_ninh_ve_sinh_05:
+  - text: Các em tự dọn vệ sinh phòng mình ở, các thầy cô quản sinh sẽ kiểm tra nếu phòng bẩn sẽ bị phạt theo nội quy.
+    image: https://i.imgur.com/UToa4Po.jpg
+  utter_an_ninh_ve_sinh_06:
+  - text: Các buổi chiều từ 17h30' các em sẽ được phân công lao động theo lịch, dọn dẹp vệ sinh khu ký túc xá.
+  utter_dang_ky_ktx:
+  - text: Tất cả hssv học tại trường đều được ở KTX. Hiện tại em chưa đủ điều kiện để đăng ký ở KTX. Sau khi trúng tuyển và nhập học {name} nhận giấy đăng ký và hướng dẫn tại KTX hoặc Phòng CTHSSV.
+  utter_huong_dan_ktx:
+  - text: Sau khi đơn xin ở Ký túc xá được phê duyệt, em gặp Thầy Cô quản lý Ký túc xá và nói nguyện vọng của mình để được tư vấn và sắp xếp.
+  utter_cang_tin:
+  - text: Căng tin nằm trong khuôn viên Ký túc xá.
+    image: https://i.imgur.com/ZcpJsue.jpg
+  utter_cang_tin_01:
+  - text: Phục vụ tất cả các hssv, nhân viên, giáo viên của Trường.
+    image: https://i.imgur.com/zGVhvp3.jpg
+  utter_cang_tin_02:
+  - text: Căng tin phục vụ tất cả các đồ uống, đồ ăn, thực phẩm,... cho các em. Ăn tại Căng tin hoặc mang đi.
+    image: https://i.imgur.com/CtjtAt1.png
+  utter_cang_tin_03:
+  - text: Phục vụ cả những buổi liên hoan nhóm, lớp, Trường,...
+    image: https://i.imgur.com/QsL67MP.jpg
+  utter_cang_tin_04:
+  - text: Đồ ăn uống đảm bảo vệ sinh theo quy định an toàn thực phẩm và đầy đủ dưỡng chất cho các em.
+    image: https://i.imgur.com/Wa6GQnW.jpg
+  utter_cang_tin_05:
+  - text: Ăn ở Căng tin cần mua phiếu ăn. Nếu người ngoài Trường ăn cùng như bố, mẹ, anh, chị, bạn,... Phải khai báo trước.
+    image: 
+  utter_san_tap_the_thao:
+  - text: Sân tập thể thao được kết hợp trong khuyên viên của Trường.
+    image: https://i.imgur.com/0MJa34i.jpg
+  utter_san_tap_the_thao_01:
+  - text: 5 sân cầu lông (Trong đó có 2 sân cầu lông trong nhà đa năng).
+    image: https://i.imgur.com/cqRLBmX.jpg
+  utter_san_tap_the_thao_02:
+  - text: 3 sân bóng chuyền.
+    image: https://i.imgur.com/511ssHb.jpg
+  utter_san_tap_the_thao_03:
+  - text: 1 sân bóng đá.
+    image: https://i.imgur.com/mkPrW88.jpg
+  utter_san_tap_the_thao_04:
+  - text: 1 sân tenis.
+    image: https://i.imgur.com/PoeQkn6.jpg
+  utter_san_tap_the_thao_05:
+  - text: 1 khu tập gym ngoài trời.
+  utter_san_tap_the_thao_06:
+  - text: Các em sử dụng tất cả hoàn toàn miễn phí.
+  utter_nha_khach:
+  - text: Toà nhà khách 2 tầng, có 16 phòng.
+    image: https://i.imgur.com/DHgN4Ax.jpg
+  utter_nha_khach_01:
+  - text: Hiện tại đang tạm thời được các em du học sinh Lào sử dụng.
+    image: https://i.imgur.com/V81LcbF.jpg
+  utter_khu_KTX_end:
+  - text: "Về Menu chính hoặc quay lại Khu ký túc xá"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: quay lại
+      payload: /khu_KTX
+# Toà nhà hiệu bộ
+  utter_nha_hieu_bo:
+  - text: TOÀ NHÀ HIỆU BỘ
+    elements:
+    - title: NƠI LÀM VIỆC CỦA CÁC BỘ, GIÁO VIÊN NHÀ TRƯỜNG
+      subtitle: Toà nhà hiệu bộ bao gồm
+      image_url: https://i.imgur.com/gxD3wPb.jpg
+      buttons:
+      - title: ban giám hiệu
+        payload: /hieu_bo_ban_giam_hieu
+      - title: các phòng ban
+        payload: /hieu_bo_phong_ban
+      - title: các khoa
+        payload: /hieu_bo_cac_khoa
+    - title: CÁC PHÒNG KHÁC
+      subtitle: Bao gồm
+      image_url: https://i.imgur.com/1iwBeBw.jpg
+      buttons:
+      - title: phòng hội trường
+        payload: /hieu_bo_hoi_truong
+      - title: phòng truyền thống
+        payload: /hieu_bo_truyen_thong
+      - title: menu chính
+        payload: /menu_chinh
+  utter_hieu_bo_ban_giam_hieu:
+  - text: Phòng làm việc của Hiệu trưởng nhà Trường.
+    image: https://i.imgur.com/uc9vjqk.jpg
+  utter_hieu_bo_phong_ban:
+  - text: Nơi làm việc của các phòng ban (Đào tạo, Tổ chức, CTHSSV)
+    image: https://i.imgur.com/0NbiEu3.png
+  utter_hieu_bo_cac_khoa:
+  - text: Phòng làm việc của các khoa (Tin học, Cơ khí, Điện-Điện tử, Kinh tế, Khoa học cơ bản)
+    image: https://i.imgur.com/cw4jjpE.jpg
+  utter_hieu_bo_hoi_truong:
+  - text: Tổ chức các cuộc họp, học tập,... của toàn thể giáo viên, nhân viên trường.
+    image: https://i.imgur.com/bv0wjXg.jpg
+  utter_hieu_bo_truyen_thong:
+  - text: Phòng truyền thống của Trường.
+    image: https://i.imgur.com/yXAgwLw.jpg
+  utter_nha_hieu_bo_end:
+  - text: "Về Menu chính hoặc quay lại Toà nhà hiệu bộ"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: quay lại
+      payload: /nha_hieu_bo
+# Học tập và giảng đường
+  utter_hoc_tap_giang_duong:
+  - text: CÁC PHÒNG HỌC LÝ THUYẾT, THỰC HÀNH VÀ GIẢNG ĐƯỜNG
+    elements:
+    - title: PHÒNG HỌC & GIẢNG ĐƯỜNG
+      subtitle: Cơ sở vật chất để học tập
+      image_url: https://i.imgur.com/ZvMNbqd.jpg
+      buttons:
+      - title: phòng học lý thuyết
+        payload: /phong_hoc_ly_thuyet
+      - title: phòng học thực hành
+        payload: /phong_hoc_thuc_hanh
+      - title: giảng đường
+        payload: /giang_duong
+  utter_phong_hoc_ly_thuyet:
+  - text: Là phòng dùng cho hssv học lý thuyết trên lớp.
+    image: https://i.imgur.com/HSKtvF2.jpg
+  utter_phong_hoc_ly_thuyet_01:
+  - text: Toà nhà lý thuyết 3 tầng, 60 phòng, đầy đủ tiện nghi và đồ dùng dành cho học tập lý thuyết.
+    image: https://i.imgur.com/KxwRnnu.jpg
+  utter_phong_hoc_thuc_hanh:
+  - text: Là phòng dùng cho hssv học thực hành kỹ năng nghề.
+    image: https://i.imgur.com/9oFa4GH.jpg
+  utter_phong_hoc_thuc_hanh_01:
+  - text: Do đặc thù từng ngành học, nên mỗi khoa lại có các phòng thực hành ở các khu khác nhau.
+    image: https://i.imgur.com/kFnQb97.jpg
+  utter_giang_duong:
+  - text: Toàn cảnh giảng đường.
+    image: https://i.imgur.com/g4vN2qI.jpg
+  utter_giang_duong_01:
+  - text: Sức chứa lên đên 1000 người. Đầy đủ tiện nghi cho các em học tập.
+    image: https://i.imgur.com/l55IQEC.jpg
+  utter_hoc_tap_giang_duong_end:
+  - text: "Về Menu chính hoặc quay lại Học tập & giảng đường"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: quay lại
+      payload: /hoc_tap_giang_duong
+# Học phí các ngành nghề
+  utter_hoc_phi:
+  - text: HỌC PHÍ CÁC NGÀNH NGHỀ VÀ CÁC HỆ ĐÀO TẠO
+    elements:
+    - title: HỌC PHÍ CÁC NGÀNH NGHỀ
+      subtitle: Học phí các ngành nghề của Trường
+      image_url: https://i.imgur.com/cgAoYSh.jpg
+      buttons:
+      - title: công nghệ ô tô
+        payload: /hp_cong_nghe_oto
+      - title: điện công nghiệp
+        payload: /hp_dien_cong_nghiep
+      - title: điện tử dân dụng
+        payload: /hp_dien_tu_dan_dung
+    - title: HỌC PHÍ CÁC NGÀNH NGHỀ
+      subtitle: Học phí các ngành nghề của Trường
+      image_url: https://i.imgur.com/AnU58oy.jpg
+      buttons:
+      - title: Hàn
+        payload: /hp_han
+      - title: quản trị mạng máy tính
+        payload: /hp_quan_tri_mang_mt
+      - title: hướng dẫn du lịch
+        payload: /hp_huong_dan_du_lich
+    - title: HỌC PHÍ CÁC NGÀNH NGHỀ
+      subtitle: Học phí các ngành nghề của Trường
+      image_url: https://i.imgur.com/ZvMNbqd.jpg
+      buttons:
+      - title: kế toán doanh nghiệp
+        payload: /hp_ke_toan_doanh_nghiep
+      - title: VHM Thi công nền
+        payload: /hp_vhm_thi_cong_nen
+      - title: menu chính
+        payload: /menu_chinh
+  utter_hp_cong_nghe_oto:
+  - text: HỌC PHÍ NGÀNH CÔNG NGHỆ Ô TÔ
+    elements:
+    - title: HỌC PHÍ CÁC HỆ ĐÀO TẠO
+      subtitle: Ngành Công nghệ ô tô không đào tạo hệ sơ cấp.
+      image_url: https://i.imgur.com/kFnQb97.jpg
+      buttons:
+      - title: hệ cao đẳng
+        payload: /hp_cong_nghe_oto_cd
+      - title: hệ trung cấp
+        payload: /hp_cong_nghe_oto_tc
+      - title: menu chính
+        payload: /menu_chinh
+  utter_hp_cong_nghe_oto_cd:
+  - text: "Học phí ngành Công nghệ ô tô hệ Cao đẳng là: 14.000.000 đồng/khóa học/3 năm. Bằng: 2.333.000 đồng/một học kỳ."
+  utter_hp_cong_nghe_oto_tc:
+  - text: "Học phí ngành Công nghệ ô tô hệ Trung cấp là: 11.500.000 đồng/khóa học/2 năm. Bằng: 2.875.000 đồng/một học kỳ."
+  utter_hp_dien_cong_nghiep:
+  - text: HỌC PHÍ NGÀNH ĐIỆN CÔNG NGHIỆP
+    elements:
+    - title: HỌC PHÍ CÁC HỆ ĐÀO TẠO
+      subtitle: Ngành Điện công nghiệp không đào tạo hệ sơ cấp.
+      image_url: https://i.imgur.com/W4tj43n.jpg
+      buttons:
+      - title: hệ cao đẳng
+        payload: /hp_dien_cong_nghiep_cd
+      - title: hệ trung cấp
+        payload: /hp_dien_cong_nghiep_tc
+      - title: menu chính
+        payload: /menu_chinh
+  utter_hp_dien_cong_nghiep_cd:
+  - text: "Học phí ngành Điện công nghiệp hệ Cao đẳng là: 12.000.000 đồng/khóa học/3 năm. Bằng: 2.000.000 đồng/một học kỳ."
+  utter_hp_dien_cong_nghiep_tc:
+  - text: "Học phí ngành Điện công nghiệp hệ Trung cấp là: 9.500.000 đồng/khóa học/2 năm. Bằng: 2.375.000 đồng/một học kỳ."
+  utter_hp_dien_tu_dan_dung:
+  - text: HỌC PHÍ NGÀNH ĐIỆN TỬ DÂN DỤNG.
+    elements:
+    - title: HỌC PHÍ CÁC HỆ ĐÀO TẠO
+      subtitle: Các em hãy lựa chọn các hệ đào tạo mà mình muốn học nhé.
+      image_url: https://i.imgur.com/BCAtduS.jpg
+      buttons:
+      - title: hệ cao đẳng
+        payload: /hp_dien_tu_dan_dung_cd
+      - title: hệ trung cấp
+        payload: /hp_dien_tu_dan_dung_tc
+      - title: hệ sơ cấp
+        payload: /hp_dien_tu_dan_dung_sc
+  utter_hp_dien_tu_dan_dung_cd:
+  - text: "Học phí ngành Điện tử dân dụng hệ Cao đẳng là: 12.000.000 đồng/khóa học/3 năm. Bằng: 2.000.000 đồng/một học kỳ."
+  utter_hp_dien_tu_dan_dung_tc:
+  - text: "Học phí ngành Điện tử dân dụng hệ Trung cấp là: 9.500.000 đồng/khóa học/2 năm. Bằng: 2.375.000 đồng/một học kỳ."
+  utter_hp_dien_tu_dan_dung_sc:
+  - text: "Học phí ngành Điện tử dân dụng hệ Sơ cấp là: 1.800.000 đồng/khóa học/3 tháng."
+  utter_hp_han:
+  - text: HỌC PHÍ NGÀNH HÀN
+    elements:
+    - title: HỌC PHÍ CÁC HỆ ĐÀO TẠO
+      subtitle: Ngành Hàn không đào tạo hệ cao đẳng.
+      image_url: https://i.imgur.com/3oDEe8n.jpg
+      buttons:
+      - title: hệ trung cấp
+        payload: /hp_han_tc
+      - title: hệ sơ cấp
+        payload: /hp_han_sc
+      - title: menu chính
+        payload: /menu_chinh
+  utter_hp_han_tc:
+  - text: "Học phí ngành Hàn hệ Trung cấp là: 9.500.000 đồng/khóa học/2 năm. Bằng: 2.375.000 đồng/một học kỳ."
+  utter_hp_han_sc:
+  - text: "Học phí ngành Hàn hệ Sơ cấp là: 1.800.000 đồng/khóa học/3 tháng."
+  utter_hp_quan_tri_mang_mt:
+  - text: HỌC PHÍ NGÀNH QUẢN TRỊ MẠNG MÁY TÍNH
+    elements:
+    - title: HỌC PHÍ CÁC HỆ ĐÀO TẠO
+      subtitle: Em hãy lựa chọn các hệ đào tạo mà mình muốn học nhé.
+      image_url: https://i.imgur.com/cgAoYSh.jpg
+      buttons:
+      - title: hệ cao đẳng
+        payload: /hp_quan_tri_mang_mt_cd
+      - title: hệ trung cấp
+        payload: /hp_quan_tri_mang_mt_tc
+      - title: hệ sơ cấp
+        payload: /hp_tin_hoc_van_phong_sc
+  utter_hp_quan_tri_mang_mt_cd:
+  - text: "Học phí ngành Quản trị mạng máy tính hệ Cao đẳng là: 12.000.000 đồng/khóa học/3 năm. Bằng: 2.000.000 đồng/một học kỳ."
+  utter_hp_quan_tri_mang_mt_tc:
+  - text: "Học phí ngành Quản trị mạng máy tính hệ Trung cấp là: 9.500.000 đồng/khóa học/2 năm. Bằng: 2.375.000 đồng/một học kỳ."
+  utter_hp_tin_hoc_van_phong_sc:
+  - text: "Học phí ngành Tin học văn phòng hệ Sơ cấp là: 1.800.000 đồng/khóa học/3 tháng."
+  utter_hp_huong_dan_du_lich:
+  - text: HỌC PHÍ NGÀNH HƯỚNG DẪN DU LỊCH
+    elements:
+    - title: HỌC PHÍ CÁC HỆ ĐÀO TẠO
+      subtitle: Ngành Hướng dẫn du lịch không đào tạo hệ cao đẳng.
+      image_url: https://i.imgur.com/AnU58oy.jpg
+      buttons:
+      - title: hệ trung cấp
+        payload: /hp_huong_dan_du_lich_tc
+      - title: hệ sơ cấp
+        payload: /hp_huong_dan_du_lich_sc
+      - title: menu chính
+        payload: /menu_chinh
+  utter_hp_huong_dan_du_lich_tc:
+  - text: "Học phí ngành Hướng dẫn du lịch hệ Trung cấp là: 7.500.000 đồng/khóa học/2 năm. Bằng: 1.875.000 đồng/một học kỳ"
+  utter_hp_huong_dan_du_lich_sc:
+  - text: "Học phí ngành Hướng dẫn du lịch hệ Sơ cấp là: 1.500.000 đồng/khóa học 3 tháng."
+  utter_hp_ke_toan_doanh_nghiep:
+  - text: HỌC PHÍ NGÀNH KẾ TOÁN DOANH NGHIỆP
+    elements:
+    - title: HỌC PHÍ CÁC HỆ ĐÀO TẠO
+      subtitle: Em hãy lựa chọn các hệ đào tạo mà mình muốn học nhé.
+      image_url: https://i.imgur.com/16TEn8p.jpg
+      buttons:
+      - title: hệ cao đẳng
+        payload: /hp_ke_toan_doanh_nghiep_cd
+      - title: hệ trung cấp
+        payload: /hp_ke_toan_doanh_nghiep_tc
+      - title: hệ sơ cấp
+        payload: /hp_ke_toan_doanh_nghiep_sc
+  utter_hp_ke_toan_doanh_nghiep_cd:
+  - text: "Học phí ngành Kế toán doanh nghiệp hệ Cao đẳng là: 9.000.000 đồng/khóa học/3 năm. Bằng: 1.500.000 đồng/một học kỳ."
+  utter_hp_ke_toan_doanh_nghiep_tc:
+  - text: "Học phí ngành Kế toán doanh nghiệp hệ Trung cấp là: 7.500.000 đồng/khóa học/2 năm. Bằng: 1.875.000 đồng/một học kỳ."
+  utter_hp_ke_toan_doanh_nghiep_sc:
+  - text: "Học phí ngành Kế toán doanh nghiệp hệ Sơ cấp là: 1.500.000 đồng/khóa học 3 tháng."
+  utter_hp_vhm_thi_cong_nen:
+  - text: |
+          - Ngành Vận hành máy thi công nền hiện tại không đào tạo hệ Cao đẳng và Sơ cấp. 
+          - Học phí ngành Vận hành máy thi công nền hệ Trung cấp là: 11.500.000 đồng/khóa học/2 năm. Bằng: 2.875.000 đồng/một học kỳ.
+  utter_hoc_phi_end:
+  - text: "Về Menu chính hoặc quay lại Học phí"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: quay lại
+      payload: /hoc_phi
+# Chế độ trợ cấp xã hội
+  utter_tro_cap_xa_hoi:
+  - text: "Em hãy xác nhận mình thuộc đối tượng trợ cấp xã hội nào sau đây:"
+    image: https://i.imgur.com/luFw4uf.jpg
+  utter_tro_cap_xa_hoi_01:
+  - text: Người dân tộc thiểu số có hộ khẩu thường trú ở vùng có điều kiện kinh tế xã hội đặc biệt khó khăn (KV135).
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_tro_cap_xa_hoi_02:
+  - text: Có hoàn cảnh đặc biệt khó khăn về kinh tế.
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_tro_cap_xa_hoi_03:
+  - text: Mồ côi cả cha lẫn mẹ.
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_tro_cap_xa_hoi_04:
+  - text: Không nơi nương tựa.
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_tro_cap_xa_hoi_05:
+  - text: Tàn tật mất sức lao động từ 41% trở lên.
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_tro_cap_xa_hoi_06:
+  - text: "Người dân tộc thiểu số có hộ khẩu thường trú ở vùng có điều kiện kinh tế xã hội đặc biệt khó khăn (KV135). Được hưởng: 140.000 đồng/tháng."
+  utter_tro_cap_xa_hoi_07:
+  - text: "Học sinh có hoàn cảnh đặc biệt khó khăn về kinh tế. Mồ côi cả cha lẫn mẹ. Không nơi nương tựa. Tàn tật mất sức lao động từ 41% trở lên. Được hưởng 100.000 đồng/tháng."
+  utter_tro_cap_xa_hoi_08:
+  - text: "Em không thuộc đối tượng được hưởng trợ cấp xã hội."
+  utter_tro_cap_xa_hoi_end:
+  - text: "Về Menu chính hoặc quay lại Trợ cấp xã hội"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: quay lại
+      payload: /tro_cap_xa_hoi
+# Miễn giảm học phí
+  utter_mien_giam_hoc_phi:
+  - text: "Em hãy xác nhận mình thuộc đối tượng miễn giảm học phí nào sau đây:"
+  utter_mien_giam_hoc_phi_01:
+  - text: "Người có công với cách mạng hoặc thân nhân của người có công với cách mạng."
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_mien_giam_hoc_phi_02:
+  - text: HSSV bị tàn tật, khuyết tật, thuộc diện hộ nghèo, cận nghèo.
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_mien_giam_hoc_phi_03:
+  - text: HSSV là người dân tộc thiểu số thuộc hộ nghèo, cận ngèo.
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_mien_giam_hoc_phi_04:
+  - text: HSSV là người dân tộc thiểu số ở vùng kinh tế đặc biệt khó khăn (KV135).
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_mien_giam_hoc_phi_05:
+  - text:  Học sinh tốt nghiệp THCS học lên trung cấp.
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_mien_giam_hoc_phi_06:
+  - text: Học sinh, sinh viên ở vùng có điều kiện kinh tế-xã hội đặc biệt khó khăn (KV135).
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_mien_giam_hoc_phi_07:
+  - text:  Học sinh, sinh viên là con cán bộ, công nhân, viên chức mà cha hoặc mẹ bị tai nạn lao động hoặc mắc bệnh nghề nghiệp được hưởng trợ cấp thường xuyên.
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_mien_giam_hoc_phi_08:
+  - text: |
+           Miễn học phí:
+           - Người có công với cách mạng hoặc thân nhân của người có công với cách mạng.
+           - HSSV bị tàn tật, khuyết tật, thuộc diện hộ nghèo, cận nghèo.
+           - HSSV là người dân tộc thiểu số thuộc hộ nghèo, cận ngèo.
+           - HSSV là người dân tộc thiểu số ở vùng kinh tế đặc biệt khó khăn (KV135).
+           - Học sinh tốt nghiệp THCS học lên trung cấp.
+  utter_mien_giam_hoc_phi_09:
+  - text: |
+          Giảm 70% học phí:
+          - Học sinh, sinh viên ở vùng có điều kiện kinh tế-xã hội đặc biệt khó khăn (KV135).
+  utter_mien_giam_hoc_phi_10:
+  - text: |
+          Giảm 50% học phí:
+          - Học sinh, sinh viên là con cán bộ, công nhân, viên chức mà cha hoặc mẹ bị tai nạn lao động hoặc mắc bệnh nghề nghiệp được hưởng trợ cấp thường xuyên.
+  utter_mien_giam_hoc_phi_11:
+  - text: "{name} không thuộc đối tượng được miễn giảm học phí."
+  utter_mien_giam_hoc_phi_end:
+  - text: "Về Menu chính hoặc quay lại Miễn giảm học phí"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: quay lại
+      payload: /mien_giam_hoc_phi
+# Xét tuyển hồ sơ tuyển sinh của học sinh sinh viên.
+  utter_xet_tuyen:
+  - text: "Trường CĐKTCNHB Xét tuyển."
+    elements:
+    - title: Xét tuyển hồ sơ Học sinh Sinh viên
+      subtitle: Các cô giáo đang xét tuyển hồ sơ hssv.
+      image_url: https://i.imgur.com/wV454ty.jpg
+      buttons:
+      - title: xét tuyển
+        payload: /xet_tuyen_01
+      - title: thông báo trúng tuyển
+        payload: /xet_tuyen_02
+      - title: hình ảnh nhập học
+        payload: /hinh_anh_nhap_hoc
+  utter_xet_tuyen_01:
+  - text: |
+          - Trường CĐKTCNHB xét tuyển dựa trên Học bạ Trung học phổ thông, Bổ túc văn hoá, Trung học cơ sở hoặc tương đương của các em.
+          - Dựa vào kết quả học tập và rèn luyện trong học bạ, nhà trường sẽ lấy kết quả từ cao xuống thấp đến khi đạt chỉ tiêu.
+  utter_xet_tuyen_02:
+  - text: |
+          - Thời gian nhận kết quả xét tuyển từ ngày 01/9/2021 đến ngày 7/9/2021.
+          - Tất cả các em trúng tuyển sẽ được gọi điện thông báo và nhận giấy trúng tuyển.
+  utter_hinh_anh_nhap_hoc:
+  - text: Hình ảnh nhập học Cao đẳng K8 và Trung cấp K18
+    image: https://i.imgur.com/azLonWV.jpg
+  utter_hinh_anh_nhap_hoc_01:
+  - text: Các em hssv đăng ký nhập học.
+    image: https://i.imgur.com/Y4zuHWQ.jpg
+  utter_hinh_anh_nhap_hoc_02:
+  - text: Thầy cô tư vấn các em chọn ngành nghề.
+    image: https://i.imgur.com/7YwRT7z.jpg 
+  utter_hinh_anh_nhap_hoc_03:
+  - text: Hssv cùng phụ huynh ăn cơm tại căng tin.
+    image: https://i.imgur.com/0de0z9R.jpg
+  utter_hinh_anh_nhap_hoc_04:
+  - text: Các em đang đợi để đăng ký ở Ký túc xá.
+    image: https://i.imgur.com/PojeMMa.jpg
+  utter_hinh_anh_nhap_hoc_end:
+  - text: "Về Menu chính hoặc quay lại xét tuyển hồ sơ"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: quay lại
+      payload: /xet_tuyen
+# Đối tượng ưu tiên xét tuyển
+  utter_doi_tuong_uu_tien:
+  - text: |
+          {name} có thể tham khảo tài liệu về đối tượng ưu tiên trong tuyển sinh Trường CĐKTCNHB ở link bên dưới:
+          [https://drive.google.com/file/d/17EhuS0rU7T26A0IwziaKLXOq2Owtyj5z/view?usp=sharing]
+          Để xem mình có thuộc dạng ưu tiên không nhé.
+    image: https://i.imgur.com/fNchSkW.jpg
+  utter_doi_tuong_uu_tien_01: 
+  - text: |
+          - Đã biết mình thuộc đối tượng nào? Muốn biết được ưu tiên những gì?
+          - Em hãy ấn vào đối tượng đó.
+          - Nếu không thuộc các đối tượng nào, sẽ không được ưu tiên xét tuyển.
+    buttons:
+    - title: đối tượng 01,02,03
+      payload: /doi_tuong_uu_tien_02
+    - title: đối tượng 04,05,06,07
+      payload: /doi_tuong_uu_tien_03
+    - title: đối tượng 08,09,10
+      payload: /doi_tuong_uu_tien_04
+  utter_doi_tuong_uu_tien_02:
+  - text: "Chúc mừng em! Em được nhận thẳng vào học tại trường không cần qua xét tuyển. Em hãy làm hồ sơ và nộp đúng thời hạn quy định nhé."
+  utter_doi_tuong_uu_tien_03:
+  - text: |
+          Em được cộng thêm 2 điểm vào điểm tổng kết trong học bạ.
+          * Chú ý: Nếu em thuộc nhiều đối tượng thì chỉ được hưởng chế đố ưu tiên cao nhất.
+  utter_doi_tuong_uu_tien_04:
+  - text: |
+          Em được cộng thêm 1 điểm vào điểm tổng kết trong học bạ.
+          * Chú ý: Nếu em thuộc nhiều đối tượng thì chỉ được hưởng chế đố ưu tiên cao nhất.
+  utter_doi_tuong_uu_tien_end:
+  - text: "Về Menu chính hoặc Xác nhận lại"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: xác nhận lại
+      payload: /doi_tuong_uu_tien
+# Đối tượng ưu tiên theo khu vực xét tuyển
+  utter_khu_vuc:
+  - text: "Trường CĐKTCNHB tuyển sinh trên toàn quốc."
+    elements:
+    - title: "Được chia làm 3 khu vực:"
+      subtitle: "Em hãy xác nhận mình ở khu vực nào sau đây:"
+      image_url: https://i.imgur.com/luFw4uf.jpg
+  utter_khu_vuc_01:
+  - text: "Khu vực 1 (KV1) gồm: Các xã, thị trấn thuộc miền núi, vùng cao, vùng sâu, hải đảo, trong đó có các xã thuộc vùng có điều kiện kinh tế-xã hội đặc biệt khó khăn theo quy định của Chính phủ."
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_khu_vuc_02:
+  - text: "Khu vực 2 (KV2) gồm: Các thành phố trực thuộc tỉnh, các thị xã, các huyện ngoại thành của thành phố trực thuộc trung ương."
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_khu_vuc_03:
+  - text: "Khu vực 3 (KV3) gồm: Các quận nội thành của thành phố trực thuộc trung ương."
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_khu_vuc_04:
+  - text: "Khu vực 2-nông thôn (KV2-NT) gồm: Các xã, thị trấn không thuộc KV1, KV2, KV3."
+    buttons:
+    - title: xác nhận
+      payload: /xac_nhan
+    - title: không
+      payload: /phu_nhan
+  utter_khu_vuc_05:
+  - text: "Khu vực 1 (KV1): Được cộng 1.5 điểm."
+  utter_khu_vuc_06:
+  - text: "Khu vực 2-nông thôn (KV2-NT): Được cộng 1 điểm."
+  utter_khu_vuc_07:
+  - text: "Khu vực 2 (KV2): Được cộng 0,5 điểm."
+  utter_khu_vuc_08:
+  - text: "Em không thuộc khu vực nào trên đây, nên em không thuộc diện hưởng ưu tiên theo khu vực."
+  utter_khu_vuc_09:
+  - text: "Không thuộc diện hưởng ưu tiên theo khu vực."
+  utter_khu_vuc_end:
+  - text: "Về Menu chính hoặc Xác nhận lại"
+    buttons:
+    - title: menu chính
+      payload: /menu_chinh
+    - title: xác nhận lại
+      payload: /khu_vuc
+# Yêu cầu nhập lại khi người dùng trả lời sai.
+  utter_please_rephrase:
+  - text: Xin lỗi, Tôi không hiểu lắm. Em hãy diễn đạt lại.....
+forms:
+  newsletter_form:
+    name:
+      - type: from_text
+        entity: name
+    phone:
+      - type: from_text
+        entity: phone
+    email:
+      - type: from_text
+        entity: email
+slots:
+  name:
+    type: text
+    influence_conversation: false
+  phone:
+    type: float
+    influence_conversation: false
+  email:
+    type: text
+    influence_conversation: false
