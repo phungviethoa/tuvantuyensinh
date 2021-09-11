@@ -990,7 +990,7 @@ responses:
   utter_chuan_bi_ho_so_06:
   - text: |
           Em có thể chuyển phát hồ sơ đến Trường theo địa chỉ: 
-           - Ban tuyển sinh – Phòng Đào tạo – Trường Cao đẳng Kĩ thuật Công nghệ Hòa Bình. 
+           - Ban tuyển sinh – Phòng Đào tạo – Trường Cao đẳng Kỹ thuật Công nghệ Hòa Bình. 
            - Số điện thoại: 02183601259
           Thầy cô sẽ kiểm tra hồ sơ của em, nếu đầy đủ sẽ tiến hành xét tuyển theo quy định của nhà Trường.
   utter_ban_do_truong:
@@ -1109,7 +1109,7 @@ responses:
   utter_an_ninh_ve_sinh_06:
   - text: Các buổi chiều từ 17h30' các em sẽ được phân công lao động theo lịch, dọn dẹp vệ sinh khu ký túc xá.
   utter_dang_ky_ktx:
-  - text: Tất cả hssv học tại trường đều được ở KTX. Hiện tại em chưa đủ điều kiện để đăng ký ở KTX. Sau khi trúng tuyển và nhập học {name} nhận giấy đăng ký và hướng dẫn tại KTX hoặc Phòng CTHSSV.
+  - text: Tất cả hssv học tại trường đều được ở KTX. Hiện tại em chưa đủ điều kiện để đăng ký ở KTX. Sau khi trúng tuyển và nhập học em nhận giấy đăng ký và hướng dẫn tại KTX hoặc Phòng CTHSSV.
   utter_huong_dan_ktx:
   - text: Sau khi đơn xin ở Ký túc xá được phê duyệt, em gặp Thầy Cô quản lý Ký túc xá và nói nguyện vọng của mình để được tư vấn và sắp xếp.
   utter_cang_tin:
@@ -1131,7 +1131,7 @@ responses:
   - text: Ăn ở Căng tin cần mua phiếu ăn. Nếu người ngoài Trường ăn cùng như bố, mẹ, anh, chị, bạn,... Phải khai báo trước.
     image: 
   utter_san_tap_the_thao:
-  - text: Sân tập thể thao được kết hợp trong khuyên viên của Trường.
+  - text: Sân tập thể thao được kết hợp trong khuôn viên của Trường.
     image: https://i.imgur.com/0MJa34i.jpg
   utter_san_tap_the_thao_01:
   - text: 5 sân cầu lông (Trong đó có 2 sân cầu lông trong nhà đa năng).
@@ -1538,7 +1538,7 @@ responses:
           Giảm 50% học phí:
           - Học sinh, sinh viên là con cán bộ, công nhân, viên chức mà cha hoặc mẹ bị tai nạn lao động hoặc mắc bệnh nghề nghiệp được hưởng trợ cấp thường xuyên.
   utter_mien_giam_hoc_phi_11:
-  - text: "{name} không thuộc đối tượng được miễn giảm học phí."
+  - text: "Em không thuộc đối tượng được miễn giảm học phí."
   utter_mien_giam_hoc_phi_end:
   - text: "Về Menu chính hoặc quay lại Miễn giảm học phí"
     buttons:
@@ -1578,7 +1578,7 @@ responses:
   - text: Thầy cô tư vấn các em chọn ngành nghề.
     image: https://i.imgur.com/7YwRT7z.jpg 
   utter_hinh_anh_nhap_hoc_03:
-  - text: Hssv cùng phụ huynh ăn cơm tại căng tin.
+  - text: Hssv cùng phụ huynh dùng bữa tại căng tin.
     image: https://i.imgur.com/0de0z9R.jpg
   utter_hinh_anh_nhap_hoc_04:
   - text: Các em đang đợi để đăng ký ở Ký túc xá.
@@ -1593,7 +1593,7 @@ responses:
 # Đối tượng ưu tiên xét tuyển
   utter_doi_tuong_uu_tien:
   - text: |
-          {name} có thể tham khảo tài liệu về đối tượng ưu tiên trong tuyển sinh Trường CĐKTCNHB ở link bên dưới:
+          Em có thể tham khảo tài liệu về đối tượng ưu tiên trong tuyển sinh Trường CĐKTCNHB ở link bên dưới:
           [https://drive.google.com/file/d/17EhuS0rU7T26A0IwziaKLXOq2Owtyj5z/view?usp=sharing]
           Để xem mình có thuộc dạng ưu tiên không nhé.
     image: https://i.imgur.com/fNchSkW.jpg
@@ -1681,6 +1681,11 @@ responses:
 # Yêu cầu nhập lại khi người dùng trả lời sai.
   utter_please_rephrase:
   - text: Xin lỗi, Tôi không hiểu lắm. Em hãy diễn đạt lại.....
+    buttons:
+    - title: Bắt đầu
+      payload: /chao_hoi
+    - title: Vào menu chính
+      payload: /menu_chinh   
 forms:
   newsletter_form:
     name:

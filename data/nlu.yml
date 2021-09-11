@@ -22,6 +22,7 @@ nlu:
     - [Bùi Văn Nam]{"entity": "name", "role": "name", "group": "thong_tin_nguoi_dung"}
     - [Đinh Công Bình]{"entity": "name", "role": "name", "group": "thong_tin_nguoi_dung"}
     - [Trần Thu Trang]{"entity": "name", "role": "name", "group": "thong_tin_nguoi_dung"}
+    - [Đỗ Mạnh Hùng]{"entity": "name", "role": "name", "group": "thong_tin_nguoi_dung"}
 - intent: phone
   examples: |
     - [0912123123]{"entity": "phone", "role": "phone", "group": "thong_tin_nguoi_dung"}
@@ -29,11 +30,13 @@ nlu:
     - [0987822454]{"entity": "phone", "role": "phone", "group": "thong_tin_nguoi_dung"}
     - [0973283642]{"entity": "phone", "role": "phone", "group": "thong_tin_nguoi_dung"}
     - [0912342189]{"entity": "phone", "role": "phone", "group": "thong_tin_nguoi_dung"}
+    - [0916113319]{"entity": "phone", "role": "phone", "group": "thong_tin_nguoi_dung"}
 - intent: email
   examples: |
     - [vidu@gmail.com]{"entity": "email", "role": "email", "group": "thong_tin_nguoi_dung"}
     - [example@example.com]{"entity": "email", "role": "email", "group": "thong_tin_nguoi_dung"}
     - [ramdom@gmail.com]{"entity": "email", "role": "email", "group": "thong_tin_nguoi_dung"}
+    - [dohung2511@gmail.com]{"entity": "email", "role": "email", "group": "thong_tin_nguoi_dung"}
 - intent: dat_lich
   examples: |
     - đặt lịch
@@ -423,6 +426,9 @@ nlu:
     - Bạn giúp em nộp hồ sơ được không
 - intent: cac_nganh_nghe
   examples: |
+    - Tôi muốn tìm hiểu về các ngành đào tạo của trường mình
+    - trường đào tạo những ngành học nào ạ?
+    - chỉ tiêu tuyển sinh của trường?
     - các ngành nghề
     - trường đào tạo những ngành nghề nào
     - những ngành nghề trường đào tạo
